@@ -1,0 +1,941 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 2vw;
+}
+
+nav .main-menu {
+  padding-top: 10px;
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+nav .left.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+nav .left {
+  display: flex;
+  align-items: center;
+}
+nav .main-menu li a {
+  display: inline-block;
+  padding: 20px 15px;
+  text-decoration: none;
+
+  color: #1c1c1c;
+
+  text-align: center;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+nav .open-menu {
+  font-size: 2rem;
+  /* margin: 20px; */
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10vw;
+  padding-top: 1.7vw;
+}
+nav .main-menu .close-menu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(255, 123, 0);
+}
+.fa-instagram:hover {
+  color: rgb(255, 217, 0);
+}
+.fa-twitter:hover {
+  color: rgb(251, 255, 0);
+}
+.fa-github:hover {
+  color: rgb(255, 187, 0);
+}
+@media (max-width: 800px) {
+  * {
+    overflow-x: hidden;
+  }
+  nav .cls {
+    color: #fff;
+  }
+  nav .main-menu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .main-menu .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .open-menu {
+    display: block;
+  }
+  nav .main-menu li a {
+    color: #fff;
+  }
+  nav .main-menu li a:hover {
+    background: none;
+    color: orange;
+    font-size: 16 rem;
+  }
+  nav .right a {
+    display: none;
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+    color: #fff;
+  }
+  .nav-btn button {
+    display: none;
+  }
+}
+.right .nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .main-menu a {
+  color: #000;
+
+  font-family: Clash Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  transition: all 0.5s ease-in-out;
+}
+nav .main-menu a:hover {
+  color: #f55;
+}
+.right {
+  display: flex;
+  gap: 63px;
+}
+.right a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  padding: 20px 15px;
+
+  color: #000;
+  color: #1c1c1c;
+
+  text-align: center;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.right .nav-btn {
+  width: 193.966px;
+  height: 64px;
+}
+.button {
+  border: none;
+
+  transition: all 0.5s ease-out;
+  border-radius: 150px;
+  background: #9a5720;
+  color: #fff;
+  padding: 19px 59px;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.button:hover {
+  transform: scale(1.02);
+  background-color: #dba332;
+}
+
+.hero {
+  background-image: url(images/Rectangle\ 12\ \(1\).png);
+  height: 930px;
+  width: 100vw;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6vw;
+  position: relative;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 45%;
+}
+.hero-left h1 {
+  color: #1c1c1c;
+  max-width: 664px;
+  font-family: Outfit;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.hero-left p {
+  max-width: 681px;
+  color: #6c6c6c;
+
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.hero-left button {
+  max-width: 200px;
+  color: #fff;
+
+  text-align: center;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.hero-right {
+  width: 55%;
+  background-color: #e3e3e3;
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: visible;
+}
+.hero-right img {
+  padding-left: 8.5vw;
+}
+.hero-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.hm-1 {
+  position: absolute;
+  top: 25%;
+  left: 48%;
+}
+.hm-2 {
+  position: absolute;
+  top: 70%;
+  left: 49%;
+}
+.hero-msg1 {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  top: 43%;
+  right: 0.5%;
+  position: absolute;
+}
+.hero-msg-in {
+  width: 201.658px;
+  height: 26.207px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #e3e3e3;
+}
+
+.goals {
+  max-width: 1920px;
+  height: 107vh;
+  overflow: hidden;
+  display: flex;
+}
+.goals .goal-left {
+  overflow: hidden;
+  width: 90%;
+}
+.goals .goal-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3vw 5vw;
+  height: 107vh;
+  background-color: #e3be75;
+  /* width: 50%; */
+  width: 100%;
+}
+.goals .goal-right h1 {
+  overflow: hidden;
+  color: #fff;
+  padding-top: 15vw;
+  font-family: Outfit;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 80px;
+}
+.goals .goal-right h2 {
+  overflow: hidden;
+  color: #fff;
+
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 40px;
+}
+.goals .goal-right p {
+  color: #fff;
+  overflow: hidden;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  width: 33vw;
+}
+.goals .goal-right img {
+  position: absolute;
+  top: 38%;
+  right: 20%;
+}
+.goal-img {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  right: 10%;
+  top: 38%;
+}
+.goals-arrow {
+  position: absolute;
+  right: 13%;
+  bottom: 10%;
+  padding: 25px 8px;
+  border: 1px solid #9a5720;
+
+  background: #e3be75;
+}
+.specifications {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 5vw;
+  height: 1174px;
+  margin-top: 5vw;
+}
+.specifications .sp-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 40%;
+}
+.specifications .sp-left h1 {
+  color: #1c1c1c;
+
+  font-family: Outfit;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.specifications .sp-left p {
+  color: #6c6c6c;
+
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.sp-right {
+  display: flex;
+  width: 60%;
+  padding: 3vw 5vw;
+  justify-content: space-between;
+  position: relative;
+}
+.tier1 {
+  width: 410.851px;
+  height: 572.857px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background: #9a5720;
+  padding: 20px 30px;
+  box-shadow: 0px 20px 40px 0px rgba(98, 86, 162, 0.4);
+  position: absolute;
+  top: 0%;
+  left: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.tier1 h2 {
+  color: #fff;
+
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.tier1 p {
+  color: #fff;
+
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.tier2 {
+  width: 410.851px;
+  height: 572.857px;
+  border-radius: 40px;
+  border: 1px solid #9a5720;
+
+  background: #fff;
+
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  position: absolute;
+  bottom: 18%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.tier2 h2 {
+  color: #1c1c1c;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.tier2 p {
+  color: #6c6c6c;
+
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.milestone {
+  display: flex;
+
+  gap: 20px;
+}
+.mile-right {
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  padding: 10px 20px;
+}
+.mr-up h1 {
+  color: #1c1c1c;
+
+  font-family: Outfit;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.mr-up h2 {
+  color: #9a5720;
+
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.mr-down {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 4vw;
+  align-items: flex-start;
+}
+.mr-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mr-right {
+  display: flex;
+  flex-direction: column;
+}
+.mile-right p {
+  width: 390px;
+  color: #0e2333;
+
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.mr-in {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recruitment {
+  height: 999px;
+  width: 100%;
+  background-color: #fff9ee;
+  padding: 3vw 7vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin: 7vw 0;
+}
+.recruitment .rec-right h1 {
+  color: #1c1c1c;
+
+  font-family: Outfit;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.recruitment .rec-right h3 {
+  color: #1c1c1c;
+
+  font-family: Outfit;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+.recruitment .rec-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding: 3vw;
+}
+.recruitment .rec-right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mission {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vw 5vw;
+}
+.mis-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  overflow: hidden;
+  padding-left: 2vw;
+}
+.mis-left h1 {
+  color: #0e2333;
+
+  font-family: Outfit;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100px;
+}
+.mis-left button {
+  width: 240px;
+}
+.mis-left p {
+  width: 540px;
+  text-align: left;
+}
+.mis-right {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  padding-left: 5vw;
+}
+.mis-right div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.mis-right div p {
+  width: 340px;
+  color: #0e2333;
+
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  height: 462px;
+  background-color: #9a5720;
+  padding: 3vw 7vw;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.footer-up {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 3vw;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.footer h4,
+h5 {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.footer h5:hover {
+  color: #f55;
+}
+.ff {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.footer-2 h4,
+h5 {
+  overflow: hidden;
+}
+
+.footer-1 p {
+  width: 296px;
+  height: 112px;
+  overflow: hidden;
+}
+.footer-4 {
+  display: flex;
+  flex-direction: column;
+}
+.footer-4-in {
+  display: flex;
+  gap: 50px;
+}
+.footer-5 div {
+  display: flex;
+  gap: 20px;
+}
+.footer-5 div i {
+  font-size: 30px;
+}
+.footer-down {
+  text-align: center;
+  padding-top: 15px;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    margin-bottom: 5vw;
+    padding-top: 0;
+  }
+  .hero-left {
+    width: 100vw;
+    height: 100vh;
+    padding: 3vw 5vw;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-left h1 {
+    color: #1c1c1c;
+    width: 304px;
+    height: 360px;
+    font-size: 35px;
+    overflow: hidden;
+    font-weight: 700;
+  }
+
+  .hero-left p {
+    color: #6c6c6c;
+
+    font-size: 20px;
+    font-style: normal;
+    height: 100%;
+    width: 90%;
+
+   
+  }
+  .hero-left button {
+    max-width: 200px;
+    height: 100px;
+    color: #fff;
+
+    text-align: center;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .hero-right {
+    width: 100vw;
+    height: 100vh;
+  }
+  .hm-1,
+  .hm-2,
+  .hero-msg1 {
+    display: none;
+  }
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .goals {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+  .goal-left {
+    display: none;
+  }
+  .goal-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .goal-right p {
+    width: 100%;
+
+    font-size: 15px;
+  }
+  .specifications {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  .specifications .sp-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+  }
+  .specifications .sp-left h1 {
+    color: #1c1c1c;
+    overflow: hidden;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .specifications .sp-left p {
+    color: #6c6c6c;
+
+    height: 42vw;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .sp-right {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 3vw 5vw;
+    width: 100vw;
+  }
+  .tier1 {
+    width: 80%;
+    border-radius: 40px;
+    background: #9a5720;
+    padding: 20px 30px;
+    box-shadow: 0px 20px 40px 0px rgba(98, 86, 162, 0.4);
+  }
+  .tier1 h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .tier1 p {
+    color: #fff;
+
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  .tier2 {
+    display: none;
+  }
+  .milestone {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mile-left img {
+    width: 100%;
+  }
+  .mile-right {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    padding: 10px 20px;
+  }
+  .mr-down {
+    display: flex;
+    flex-direction: column;
+    padding-right: 4vw;
+    align-items: flex-start;
+  }
+  .recruitment {
+    height: 100%;
+    width: 100vw;
+    background-color: #fff9ee;
+    padding: 3vw 7vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .rec-left {
+    height: 50vh;
+    width: 98%;
+  }
+  .rec-left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .rec-right {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .recruitment .rec-right h1 {
+    color: #1c1c1c;
+    padding: 20px 0;
+    font-size: 42px;
+  }
+  .recruitment .rec-right h3 {
+    color: #1c1c1c;
+    padding-bottom: 30px;
+
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .recruitment .rec-right ul {
+    gap: 20px;
+    height: 100%;
+    max-width: 500px;
+
+    text-align: left;
+    padding-right: 30px;
+  }
+  .mission {
+    display: flex;
+    
+    flex-direction: column;
+  }
+  .mis-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    padding-left: 2vw;
+  }
+  .mis-left h1 {
+    color: #0e2333;
+    font-size: 42px;
+    font-weight: 700;
+  line-height: 50px;
+  }
+  .mis-right {
+    margin-top: 8vw;
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+    padding-left: 5vw;
+  }
+.footer{
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+  .footer-up {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  
+    padding-bottom: 3vw;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  } 
+  .footer-1{
+    height: 100%;
+  }
+  .footer-3,.footer-2 {
+    display: none;
+  }
+  .tt{
+    height: 100%;
+  }
+}
